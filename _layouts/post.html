@@ -10,7 +10,11 @@ layout: default
   </div>
 
   <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+    {% assign monato = page.data | date: "%m" %}
+    {% case monato %}
+      {% when '01' assign monatnomo = "januaro" %}
+    {% endcase %}
+    Verkita je {{ monatnomo }} {{ page.date | date: "%B %e, %Y" }}
   </div>
 
   {% include disqus.html %}
