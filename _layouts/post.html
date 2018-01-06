@@ -12,10 +12,30 @@ layout: default
   <div class="date">
     {% assign monato = page.date | date: "%m" %}
     {% case monato %}
-      {% when '01' assign monatnomo = "januaro" %}
-      {% else %}Nothing: {{ monato }}
+      {% when '01' %}{% assign monatnomo = "januaro" %}
+      {% when '02' %}{% assign monatnomo = "februaro" %}
+      {% when '03' %}{% assign monatnomo = "marto" %}
+      {% when '04' %}{% assign monatnomo = "aprilo" %}
+      {% when '05' %}{% assign monatnomo = "majo" %}
+      {% when '06' %}{% assign monatnomo = "junio" %}
+      {% when '07' %}{% assign monatnomo = "julio" %}
+      {% when '08' %}{% assign monatnomo = "aŭgusto" %}
+      {% when '09' %}{% assign monatnomo = "septembro" %}
+      {% when '10' %}{% assign monatnomo = "oktobro" %}
+      {% when '11' %}{% assign monatnomo = "novembro" %}
+      {% when '12' %}{% assign monatnomo = "decembro" %}
     {% endcase %}
-    Verkita je {{ monatnomo }} {{ page.date | date: "%B %e, %Y" }}
+    {% assign semajntago = page.date | date: "%w" %}
+    {% case semajntago %}
+      {% when '0' %}{% assign semajntagnomo = "dimanĉo" %}
+      {% when '1' %}{% assign semajntagnomo = "lundo" %}
+      {% when '2' %}{% assign semajntagnomo = "mardo" %}
+      {% when '3' %}{% assign semajntagnomo = "merkredo" %}
+      {% when '4' %}{% assign semajntagnomo = "ĵaŭdo" %}
+      {% when '5' %}{% assign semajntagnomo = "vendredo" %}
+      {% when '6' %}{% assign semajntagnomo = "sabato" %}
+    {% endcase %}
+    Verkita je {{ semajntagnomo }}, la {{ page.date | date: "%e" }}-a de {{ monatnomo }} {{ page.date | date: "%Y" }}
   </div>
 
   {% include disqus.html %}
