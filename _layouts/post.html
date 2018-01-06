@@ -12,7 +12,8 @@ layout: default
   <div class="date">
     {% assign monato = page.data | date: "%m" %}
     {% case monato %}
-      {% when '01' %}{% assign monatnomo = "januaro" %}
+      {% when '1' %}1
+      {% when '01' %}01{% assign monatnomo = "januaro" %}
     {% endcase %}
     Verkita je {{ monatnomo }} {{ page.date | date: "%B %e, %Y" }}
   </div>
