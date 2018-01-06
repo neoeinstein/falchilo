@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Pri
+permalink: /pri/
 ---
 
-Some information about you!
+Pri mi…
 
-### More Information
+### Plua Informo
 
-A place to include any other types of information that you'd like to include about yourself.
+Tio ĉi spaco estas intence blanka.
 
-### Contact me
+### Komuniku kun mi
 
-[email@domain.com](mailto:email@domain.com)
+[neoeinstein [eĉ] gmail [punkto] com](mailto:neoeinstein@gmail.com)
