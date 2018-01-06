@@ -10,7 +10,7 @@ layout: default
   </div>
 
   <div class="date">
-    {% assign monato = page.data | date: "%m" %}
+    {% assign monato = page.date | date: "%m" %}
     {% case monato %}
       {% when '1' %}1
       {% when '01' %}01{% assign monatnomo = "januaro" %}
