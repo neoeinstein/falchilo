@@ -2,7 +2,6 @@
 layout: page
 title: Pri
 permalink: /pri/
-lingvo: en-US
 ---
 
 Pri mi…
