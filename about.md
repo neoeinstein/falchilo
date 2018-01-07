@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: paĝo
 title: Pri
 permalink: /pri/
 ---
