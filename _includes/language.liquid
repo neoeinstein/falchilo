@@ -1,0 +1,52 @@
+{% assign lingvo = page.lingvo | default: 'eo' %}
+
+{% capture lingvonomo %}
+  {% case linvgo %}
+    {% when 'eo' %}Esperanto
+    {% when 'en' %}English
+  {% endcase %}
+{% endcapture %}
+
+{% capture lingvolineo %}
+  {% case linvgo %}
+    {% when 'eo' %}en {{ lingvonomo }}
+    {% when 'en' %}in {{ lingvonomo }}
+  {% endcase %}
+{% endcapture %}
+
+{% assign monato = page.date | date: "%m" %}
+{% capture monatnomo %}
+  {% case monato %}
+    {% when '01' %}januaro
+    {% when '02' %}februaro
+    {% when '03' %}marto
+    {% when '04' %}aprilo
+    {% when '05' %}majo
+    {% when '06' %}junio
+    {% when '07' %}julio
+    {% when '08' %}aŭgusto
+    {% when '09' %}septembro
+    {% when '10' %}oktobro
+    {% when '11' %}novembro
+    {% when '12' %}decembro
+  {% endcase %}
+{% endcapture %}
+
+{% assign semajntago = page.date | date: "%w" %}
+{% capture semajntagnomo %}
+  {% case semajntago %}
+    {% when '0' %}dimanĉo
+    {% when '1' %}lundo
+    {% when '2' %}mardo
+    {% when '3' %}merkredo
+    {% when '4' %}ĵaŭdo
+    {% when '5' %}vendredo
+    {% when '6' %}sabato
+  {% endcase %}
+{% endcapture %}
+
+{% capture datolineo %}
+  {% case lingvo %}
+    {% when 'eo' %}Verkita je {{ semajntagnomo }}, la {{ page.date | date: "%e" }}-a de {{ monatnomo }} {{ page.date | date: "%Y" }}
+    {% when 'en' %}Written on {{ page.date | date: "%A, %B %-d, %Y" }}
+{% endcapture %}
