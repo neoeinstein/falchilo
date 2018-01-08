@@ -24,7 +24,7 @@
 {%- endcapture -%}
 
 {%- capture legantatempo -%}
-  {%- if vortkanto >= site.words_per_minute | multiply_by: 2 %-}
+  {%- if vortkanto >= site.words_per_minute | times: 2 %-}
     {{ vortkvanto | divided_by: site.words_per_minute }} {{}}
     {%- case lingvo -%}
       {%- when 'eo' -%}minutoj por legi
