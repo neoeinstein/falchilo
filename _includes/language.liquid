@@ -49,4 +49,5 @@
   {% case lingvo %}
     {% when 'eo' %}Verkita je {{ semajntagnomo }}, la {{ page.date | date: "%e" }}-a de {{ monatnomo }} {{ page.date | date: "%Y" }}
     {% when 'en' %}Written on {{ page.date | date: "%A, %B %-d, %Y" }}
+  {% endcase %}
 {% endcapture %}
