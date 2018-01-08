@@ -25,7 +25,7 @@
 
 {%- capture legantatempo -%}
   {%- assign duoblakvanto = site.words_per_minute | times: 2 -%}
-  {%- if vortkanto >= duoblakvanto %-}
+  {%- if vortkanto >= duoblakvanto -%}
     {{ vortkvanto | divided_by: site.words_per_minute }}
     {% case lingvo -%}
       {%- when 'eo' -%}minutoj por legi
