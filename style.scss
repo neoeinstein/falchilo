@@ -20,6 +20,7 @@ html {
 body {
 	background: $white;
   font: 18px/1.4 $helvetica;
+  font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
   color: $darkGray;
 }
 
@@ -249,6 +250,12 @@ nav {
 .posts > .post:last-child {
   padding-bottom: 1em;
   border-bottom: none;
+}
+
+.byline {
+  margin-top: -1.5em;
+  font-size: 75%;
+  font-style: italic;
 }
 
 .post {
