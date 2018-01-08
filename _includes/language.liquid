@@ -14,6 +14,26 @@
   {%- endcase -%}
 {%- endcapture -%}
 
+{%- assign vortkvanto = page.content | number_of_words -%}
+
+{%- capture vortoj -%}
+  {%- case lingvo -%}
+    {%- when 'eo' -%}vortoj
+    {%- when 'en' -%}words
+  {%- endcase -%}
+{%- endcapture -%}
+
+{%- capture legantatempo -%}
+  {%- case lingvo -%}
+    {%- when 'eo' -%}{{ vortkvanto | divided_by: 180 }} minuto{%- if vortkvanto >= 360 -%}j{%- endif %} por legi
+    {%- when 'en' -%}{{ vortkvanto | divided_by: 180 }} minute{%- if vortkvanto >= 360 -%}s{%- endif %} to read
+  {%- endcase -%}
+{%- endcapture -%}
+
+{%- capture subkaplineo -%}
+  {{ lingvolineo }}, {{ vortkvanto }} {{ vortoj }}, {{ legantatempo }}
+{%- endcapture -%}
+
 {%- assign monato = page.date | date: "%m" -%}
 {%- capture monatnomo -%}
   {%- case monato -%}
