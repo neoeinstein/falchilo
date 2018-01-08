@@ -1,14 +1,14 @@
 {%- assign lingvo = page.lingvo | default: 'eo' -%}
 
 {%- capture lingvonomo -%}
-  {%- case linvgo -%}
+  {%- case lingvo -%}
     {%- when 'eo' -%}Esperanto
     {%- when 'en' -%}English
   {%- endcase -%}
 {%- endcapture -%}
 
 {%- capture lingvolineo -%}
-  {%- case linvgo -%}
+  {%- case lingvo -%}
     {%- when 'eo' -%}en {{ lingvonomo }}
     {%- when 'en' -%}in {{ lingvonomo }}
   {%- endcase -%}
