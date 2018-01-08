@@ -24,10 +24,22 @@
 {%- endcapture -%}
 
 {%- capture legantatempo -%}
-  {%- case lingvo -%}
-    {%- when 'eo' -%}{{ vortkvanto | divided_by: 180 }} minuto{%- if vortkvanto >= 360 -%}j{%- endif %} por legi
-    {%- when 'en' -%}{{ vortkvanto | divided_by: 180 }} minute{%- if vortkvanto >= 360 -%}s{%- endif %} to read
-  {%- endcase -%}
+  {%- if vortkanto >= site.words_per_minute | multiply_by: 2 %-}
+    {{ vortkvanto | divided_by: site.words_per_minute }} {{}}
+    {%- case lingvo -%}
+      {%- when 'eo' -%}minutoj por legi
+      {%- when 'en' -%}minutes to read
+    {%- endcase -%}
+  {%- elsif vortkanto >= site.words_per_minute %-}
+    {%- case lingvo -%}
+      {%- when 'eo' -%}unu minuto por legi
+      {%- when 'en' -%}one minute to read
+    {%- endcase -%}
+  {%- else -%}
+    {%- case lingvo -%}
+      {%- when 'eo' -%}malpli ol unu minuto por legi
+      {%- when 'en' -%}less than one minute to read
+    {%- endcase -%}
 {%- endcapture -%}
 
 {%- capture subkaplineo -%}
