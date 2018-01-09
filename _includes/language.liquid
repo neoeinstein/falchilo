@@ -26,20 +26,20 @@
 {%- capture legantatempo -%}
   {%- assign pvem = site.words_per_minute | to_integer -%}
   {%- assign duoblakvanto = pvem | times: 2 -%}
-  {%- if vortkanto >= duoblakvanto -%}
+  {%- if vortkvanto >= duoblakvanto -%}
     {{ vortkvanto | divided_by: pvem }}
     {% case lingvo -%}
       {%- when 'eo' -%}minutoj por legi
       {%- when 'en' -%}minutes to read
     {%- endcase -%}
-  {%- elsif vortkanto >= pvem -%}
+  {%- elsif vortkvanto >= pvem -%}
     {%- case lingvo -%}
       {%- when 'eo' -%}unu minuto por legi
       {%- when 'en' -%}one minute to read
     {%- endcase -%}
   {%- else -%}
     {%- case lingvo -%}
-      {%- when 'eo' -%}DUOBLAKVANTO: {{ duoblakvanto }} PVEM: {{ pvem }} malpli ol unu minuto por legi
+      {%- when 'eo' -%}malpli ol unu minuto por legi
       {%- when 'en' -%}less than one minute to read
     {%- endcase -%}
   {%- endif -%}
