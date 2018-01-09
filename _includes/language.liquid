@@ -24,14 +24,15 @@
 {%- endcapture -%}
 
 {%- capture legantatempo -%}
-  {%- assign duoblakvanto = site.words_per_minute | times: 2 -%}
+  {%- assign pvem = site.words_per_minute | to_integer -%}
+  {%- assign duoblakvanto = pvem | times: 2 -%}
   {%- if vortkanto >= duoblakvanto -%}
-    {{ vortkvanto | divided_by: site.words_per_minute }}
+    {{ vortkvanto | divided_by: pvem }}
     {% case lingvo -%}
       {%- when 'eo' -%}minutoj por legi
       {%- when 'en' -%}minutes to read
     {%- endcase -%}
-  {%- elsif vortkanto >= site.words_per_minute -%}
+  {%- elsif vortkanto >= pvem -%}
     {%- case lingvo -%}
       {%- when 'eo' -%}unu minuto por legi
       {%- when 'en' -%}one minute to read
