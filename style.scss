@@ -286,6 +286,30 @@ nav {
   background-color: $lightGray;
 }
 
+.kovrilo-bildo {
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  max-width: 40%;
+
+  @include mobile {
+    float: none;
+    margin-left: inherit;
+    margin-top: 1em;
+    max-width: 100%;
+  }
+
+  img {
+    max-height: 500px;
+    width: auto;
+    height: auto;
+
+    @include mobile {
+      max-height: 300px;
+    }
+  }
+}
+
 footer {
   padding: 20px 0;
   text-align: center;
