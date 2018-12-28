@@ -20,6 +20,7 @@ html {
 body {
 	background: $white;
   font: 18px/1.4 $helvetica;
+  text-rendering: optimizeLegibility;
   font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
   color: $darkGray;
 }
@@ -291,6 +292,13 @@ nav {
   margin-left: 1em;
   margin-bottom: 1em;
   max-width: 40%;
+  text-align: center;
+  font-size: 75%;
+  font-style: italic;
+
+  em {
+    font-variant: small-caps;
+  }
 
   @include mobile {
     float: none;
