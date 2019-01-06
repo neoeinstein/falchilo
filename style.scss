@@ -117,7 +117,7 @@ img {
   max-width: none;
 }
 
-.date {
+.dato {
   font-style: italic;
   color: $gray;
 }
@@ -165,7 +165,7 @@ img {
   }
 }
 
-.site-avatar {
+.eja-bildo {
   float: left;
   width: 70px;
   height: 70px;
@@ -182,7 +182,7 @@ img {
   }
 }
 
-.site-info {
+.eja-informo {
   float: left;
 
   @include mobile {
@@ -192,7 +192,7 @@ img {
   }
 }
 
-.site-name {
+.eja-nomo {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
@@ -202,7 +202,7 @@ img {
   letter-spacing: 1px;
 }
 
-.site-description {
+.eja-priskribo {
   margin: -5px 0 0 0;
   color: $gray;
   font-size: 16px;
@@ -243,24 +243,24 @@ nav {
 // .main
 //
 
-.posts > .post {
+.afiŝoj > .afiŝo {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
 }
 
-.posts > .post:last-child {
+.afiŝoj > .afiŝo:last-child {
   padding-bottom: 1em;
   border-bottom: none;
 }
 
-.byline {
+.subkaplineo {
   margin-top: -1.5em;
   font-size: 75%;
   font-style: italic;
   color: $gray;
 }
 
-.post {
+.afiŝo {
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -270,11 +270,11 @@ nav {
     font-style: italic;
   }
 
-  .comments {
+  .komentoj {
     margin-top: 10px;
   }
 
-  .read-more {
+  .legi-plu {
     text-transform: uppercase;
     font-size: 15px;
   }
