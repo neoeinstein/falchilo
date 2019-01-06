@@ -11,6 +11,13 @@ layout: bazŝablono
   </div>
 
   <div class="entry">
+    {% if page.bildo %}
+    <div class="ŝveba-bildo">
+        <img src="{{ site.baseurl }}{{ page.bildo.loko }}" alt="{{ page.bildo.alt }}" />
+        <div class="priskribo">{{ page.bildo.priskribo }}</div>
+    </div>
+    {% endif %}
+
     {{ content }}
   </div>
 
